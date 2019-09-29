@@ -25,7 +25,7 @@ public class Rectangle1 {
       System.out.println("Rectangle area = " +df.format(area));
 
       // Calculate, store and print the perimeter
-      perimeter = (length * breadth) * 2.0;
+      perimeter = (length + breadth) * 2.0;
       System.out.println("Rectangle perimeter = " + df.format(perimeter));
 
    }//main

@@ -17,10 +17,22 @@ public class Change {
       // Declare variables
       double cost, tender, changeDue;
 
+      // Input prompt
+      System.out.print("What price is the item?:\t £");
+      cost = tillInput.nextDouble();
+
+      // Input prompt 2
+      System.out.print("How much cash are you paying?:\t £");
+      tender = tillInput.nextDouble();
+
+      // Calculate
+      changeDue = tender - cost;
+
+
       // Output
-      System.out.println("Amount Due:\t\t£" +cost);
-      System.out.println("Amount Tendered\t£"+tender);
-      System.out.println("Change Due\t\t£" +change);
+      System.out.println("Amount Due:\t\t£" +cashFormat.format(cost));
+      System.out.println("Amount Tendered\t£"+cashFormat.format(tender));
+      System.out.println("Change Due\t\t£" +cashFormat.format(changeDue));
 
    }//main
 }//class

@@ -2,10 +2,12 @@ package Lab5;
 
 import java.util.Scanner;
 
-/**
+/*
  * Created by pg19mec on 07/10/2019
  * COMMENTS ABOUT PROGRAM HERE
  */
+
+
 public class CheckLetterShape {
    public static void main(String[] args) {
       // Scanner

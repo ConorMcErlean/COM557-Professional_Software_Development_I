@@ -11,7 +11,7 @@ import static Lab7.TestMethods1.readInteger;
  */
 public class TestMethods2 {
    static Scanner sc = new Scanner(System.in);
-   static DecimalFormat df = new DecimalFormat("0.00")
+   static DecimalFormat df = new DecimalFormat("0.00");
 
    // Method to accept an integer value as a parameter
    // and return the  result of 3 times the value
@@ -21,7 +21,7 @@ public class TestMethods2 {
 
    // Accept an integer and return one greater than the number
    private static int addOne(int number){
-      return number++;
+      return ++number;
    }//addOne
 
    // Method to accept two integer values as parameters
@@ -39,8 +39,21 @@ public class TestMethods2 {
       return df.format(inches/39.39);
    }//Convert to meters
 
+   // Method to deal with convert to Meters Programme
+   private static void metersProgram(){
+      double yards, feet, inches;
+      System.out.print("Please enter size in yards: ");
+      yards = sc.nextDouble();
+      System.out.print("Please enter size in feet: ");
+      feet = sc.nextDouble();
+      System.out.print("Please enter size in inches: ");
+      inches = sc.nextDouble();
+      System.out.println("Length in meters is : " + convertToMeters(yards, feet, inches) + "m");
+
+   }//meters program
+
    // Method to accept an integer 0-9 and return a string stating the number
-   private static String converToWords(int number){
+   private static String convertToWords(int number){
       switch (number){
          case 0:
             return "Zero";
@@ -81,19 +94,19 @@ public class TestMethods2 {
 
       switch (choice){
          case 1:
-            multiplyBy3(readInteger());
+            System.out.println(multiplyBy3(readInteger()));
             return true;
          case 2:
-            addOne(readInteger());
+            System.out.println(addOne(readInteger()));
             return true;
          case 3:
-            product(readInteger(),readInteger());
+            System.out.println(product(readInteger(),readInteger()));
             return true;
          case 4:
-            convertToMeters()
+            metersProgram();
             return true;
          case 5:
-            System.out.println(max());
+            System.out.println(convertToWords(readInteger()));
             return true;
          case 6:
             return false;
@@ -104,7 +117,11 @@ public class TestMethods2 {
    }//menu
 
    public static void main(String[] args) {
+      boolean cont;
 
+      do{
+         cont=menu();
+      }while(cont == true);
 
    }//main
 }//class

@@ -1,4 +1,4 @@
-package Test1;
+package LabTest1;
 
 // Import Statements
 import java.text.DecimalFormat;
